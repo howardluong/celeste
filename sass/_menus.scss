@@ -1,0 +1,32 @@
+#menusHeader {
+	background-image: url(img/menusHeader.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 100%;
+	height: 100vh;
+}
+
+#theMenu {
+	box-shadow: 10px 10px 10px gray , -10px 10px 10px gray, 0px 10px 10px gray;
+}
+
+.undraggable {
+	pointer-events: none;
+}
+
+#menusReservationBG1 {
+	background-image: url(img/menusReservationBG1.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 70vh;
+}
+
+#menusReservationBG2 {
+	background-image: url(img/menusReservationBG2.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: 70vh;
+}
