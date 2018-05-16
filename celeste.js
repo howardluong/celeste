@@ -1,7 +1,46 @@
+var timedShowPage;
+var activePage;
+
+
+function loadPage() {
+    timedShowPage = setTimeout(hidePreload, 1500);
+    activePage = setTimeout(showPage, 1500);
+}
+
+function hidePreload() {
+  document.getElementById("loadBG").style.opacity = 0;
+  // document.getElementById("mainContent").style.display = 'none';
+}
+
+function showPage() {
+	document.getElementById("mainContent").style.opacity = 1;
+	// document.getElementById("mainContent").style.display = 'block';
+	// document.getElementById('loadBG').style.display = 'none';
+	// document.getElementById('preload').removeProperty('height');
+}
+
 $(document).ready(function(){
-	$('.close').click(function(){
-		$('.modal').fadeOut();
+
+	$('#mainContent').hide();
+
+	$('#loadBG').delay(1500).fadeOut();
+	$('#mainContent').delay(1600).fadeIn();
+
+	$('body').css('display', 'none');
+	$('body').fadeIn(400);
+
+	$('.link').click(function(event){
+		event.preventDefault();
+
+		newLocation = this.href;
+
+		$('body').fadeOut(400, newPage);
 	});
+
+	function newPage(){
+		window.location = newLocation;
+	}
+
 
 	var $animation_elements = $('.animation-element');
 	var $window = $(window);
@@ -27,7 +66,8 @@ $(document).ready(function(){
 				$element.removeClass('in-view')
 			}
 		});
-	}
+	};
+
 });
 
 

@@ -189,6 +189,10 @@ html, body {
 header, section {
   overflow-x: hidden; }
 
+#mainContent {
+  opacity: 0;
+  /*  transition: 1s ease;*/ }
+
 .fjallaFont {
   font-family: "Fjalla One", sans-serif; }
 
@@ -470,6 +474,63 @@ header, section {
   -o-transform: translate(0px, 0px);
   -ms-transform: translate(0px, 0px);
   transform: translate3d(0px, 0px, 0px); }
+
+.loadBG {
+  background-color: #F4F4F4;
+  height: 100vh;
+  opacity: 1;
+  transition: 1s ease; }
+
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 48%; }
+
+.loading .bullet {
+  position: absolute;
+  padding: 5px;
+  -webkit-animation: animIn .65s ease-in-out 0s infinite;
+  animation: animIn .65s ease-in-out 0s infinite; }
+
+.loading .bullet:nth-child(1) {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s; }
+
+.loading .bullet:nth-child(2) {
+  -webkit-animation-delay: .15s;
+  animation-delay: .15s; }
+
+.loading .bullet:nth-child(3) {
+  -webkit-animation-delay: .3s;
+  animation-delay: .3s; }
+
+.loading .bullet:nth-child(4) {
+  -webkit-animation-delay: .45s;
+  animation-delay: .45s; }
+
+@-webkit-keyframes animIn {
+  0% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+    opacity: 0; } }
+
+@keyframes animIn {
+  0% {
+    -webkit-transform: translateX(-100px);
+    transform: translateX(-100px);
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  100% {
+    -webkit-transform: translateX(100px);
+    transform: translateX(100px);
+    opacity: 0; } }
 
 footer {
   background-image: url(img/footer-bg.jpg);
