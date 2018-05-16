@@ -1,30 +1,24 @@
 var timedShowPage;
-var activePage;
-
+// var displayBlock;
 
 function loadPage() {
     timedShowPage = setTimeout(hidePreload, 1500);
-    activePage = setTimeout(showPage, 1500);
+    // displayBlock = setTimeout(showPage, 1900)
 }
 
 function hidePreload() {
-  document.getElementById("loadBG").style.opacity = 0;
-  // document.getElementById("mainContent").style.display = 'none';
+  	document.getElementById("loadBG").style.opacity = 0;
+  	document.getElementById("mainContent").style.opacity = 1;
 }
 
-function showPage() {
-	document.getElementById("mainContent").style.opacity = 1;
-	// document.getElementById("mainContent").style.display = 'block';
-	// document.getElementById('loadBG').style.display = 'none';
-	// document.getElementById('preload').removeProperty('height');
-}
+// function showPage() {
+// 	document.getElementById("mainContent").style.display = 'block';
+// }
 
 $(document).ready(function(){
 
-	$('#mainContent').hide();
 
-	$('#loadBG').delay(1500).fadeOut();
-	$('#mainContent').delay(1600).fadeIn();
+	$('#mainContent').hide().delay(2000).fadeIn();
 
 	$('body').css('display', 'none');
 	$('body').fadeIn(400);
