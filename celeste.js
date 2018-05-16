@@ -1,14 +1,16 @@
 var timedShowPage;
-// var displayBlock;
 
 function loadPage() {
+
     timedShowPage = setTimeout(hidePreload, 1500);
-    // displayBlock = setTimeout(showPage, 1900)
+    
 }
 
 function hidePreload() {
   	document.getElementById("loadBG").style.opacity = 0;
   	document.getElementById("mainContent").style.opacity = 1;
+  	document.getElementById("theBody").style.overflowY = 'scroll';
+  	document.getElementById("loadBG").style.display = 'none';
 }
 
 // function showPage() {
@@ -17,8 +19,6 @@ function hidePreload() {
 
 $(document).ready(function(){
 
-
-	$('#mainContent').hide().delay(2000).fadeIn();
 
 	$('body').css('display', 'none');
 	$('body').fadeIn(400);
