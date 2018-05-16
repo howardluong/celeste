@@ -152,7 +152,9 @@
   height: 100vh; }
 
 #imageGallery img:hover {
-  cursor: pointer; }
+  cursor: pointer;
+  opacity: 0.6;
+  transition: 0.15s ease; }
 
 #contactHeader {
   background-image: url(img/contactHeaderBG.jpg);
